@@ -1,8 +1,8 @@
-package com.andy.swoosh
+package com.andy.swoosh.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.andy.swoosh.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 

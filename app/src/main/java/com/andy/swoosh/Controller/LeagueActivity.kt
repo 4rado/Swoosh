@@ -1,10 +1,11 @@
-package com.andy.swoosh
+package com.andy.swoosh.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.andy.swoosh.Utilities.EXTRA_LEAGUE
+import com.andy.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -27,18 +28,18 @@ class LeagueActivity : BaseActivity() {
     fun onMensClicked(view: View) {
         womensLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
-        selectedLeague = "mens"
+        selectedLeague = if(mensLeagueBtn.isChecked) "mens" else ""
 
     }
     fun onWomensClicked(view: View) {
         coedLeagueBtn.isChecked = false
         mensLeagueBtn.isChecked = false
-        selectedLeague = "womens"
+        selectedLeague = if(womensLeagueBtn.isChecked) "womens" else ""
     }
 
     fun onCoedClicked(view: View) {
         womensLeagueBtn.isChecked = false
         mensLeagueBtn.isChecked = false
-        selectedLeague = "coed"
+        selectedLeague = if(coedLeagueBtn.isChecked) "coed" else ""
     }
 }

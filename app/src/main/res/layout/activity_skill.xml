@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".Controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageBackgroundFinish"
@@ -61,29 +61,33 @@
         tools:ignore="ExtraText">
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/beginnerSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_underscore_toggle"
+            android:onClick="onBeginnerClick"
             android:text="@string/beginner"
             android:textColor="@android:color/white"
             android:textOff="@string/beginner"
             android:textOn="@string/beginner" />
+
         <ToggleButton
-            android:id="@+id/toggleButton6"
+            android:id="@+id/ballerSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_underscore_toggle"
+            android:onClick="onBallerClick"
             android:text="@string/baller"
             android:textColor="@android:color/white"
             android:textOff="@string/baller"
             android:textOn="@string/baller" />
+
     </LinearLayout>
 
     <Button
@@ -95,6 +99,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="onSkillFinishClicked"
         android:text="@string/finish"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageBackgroundFinish"
